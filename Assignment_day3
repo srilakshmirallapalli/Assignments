@@ -1,0 +1,115 @@
+public class ConstructorTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		FeedbackForm f1 = new FeedbackForm("Anil", 'M', 25,1);
+		System.out.println(f1);
+		f1.setForm(1);
+		
+		FeedbackForm f2 = new FeedbackForm("srinidhi", 'F', 15,3);
+		System.out.println(f2);
+		f2.setForm(3);
+		
+		FeedbackForm f3 = new FeedbackForm("Rushi", 'M', 07,2);
+		System.out.println(f3);
+		f3.setForm(2); 
+		
+		EmployerPosition ep1 = new EmployerPosition("Nidhi", 'F', 23,3);
+		System.out.println(ep1);
+		ep1.printEmpPosition(3);
+		
+		EmployerPosition ep2 = new EmployerPosition("Srinivas", 'M', 55,1);
+		System.out.println(ep2);
+		ep1.printEmpPosition(1);
+		
+		EmployerPosition ep3 = new EmployerPosition("Rajesh", 'M', 32,2);
+		System.out.println(ep3);
+		ep1.printEmpPosition(2);
+		
+	}
+
+}
+class FeedbackForm
+{
+	//DATA MEMBERS
+	String custName;
+	char cusGender;
+	int cusAge;
+	int ratingNumber;
+	
+	//MEMBER FUNCTIONS
+	
+	public FeedbackForm(String custName, char cusGender, int cusAge, int ratingNumber) 
+	{
+		this.custName = custName;
+		this.cusGender = cusGender;
+		this.cusAge = cusAge;
+		this.ratingNumber = ratingNumber;
+	}
+
+		
+	@Override
+	public String toString() {
+		return "FeedbackForm [custName=" + custName + ", cusGender=" + cusGender + ", cusAge=" + cusAge
+				+ ", ratingNumber=" + ratingNumber + "]";
+	}
+
+
+
+	public void setForm(int rating)
+	{
+		if (rating == 1)
+		{
+			System.out.println("Customer rating is"+rating+" ----- excellent");
+			System.out.println("--------------------------------------------");
+		}
+		else if (rating ==2)
+		{
+			System.out.println("Customer rating is"+rating+" ----- good");
+			System.out.println("--------------------------------------------");
+		}
+		else
+		{
+			System.out.println("Customer rating is"+rating+" ----- Needs Improvement");
+			System.out.println("--------------------------------------------");
+		}
+	}
+}
+	
+class EmployerPosition extends FeedbackForm
+{
+	//data members
+	int rating;
+
+	public EmployerPosition(String custName, char cusGender, int cusAge, int ratingNumber) 
+	{
+		super(custName, cusGender, cusAge, ratingNumber);
+	}
+
+	@Override
+	public String toString()
+	{
+		return "EmployeeFeeback [custName=" + custName + ", cusGender=" + cusGender + ", cusAge=" + cusAge
+				+ ", ratingNumber=" + ratingNumber + "]";
+	}
+	public void printEmpPosition(int rating)
+	{
+		if (rating == 1)
+		{
+			System.out.println("Wow!!!Employer is in Fortune 100 companies list with rating "+rating);
+			System.out.println("--------------------------------------------");
+		}
+		else if (rating ==2)
+		{
+			System.out.println("Great!!Employer is in Fortune 500 companies list with rating "+rating);
+			System.out.println("--------------------------------------------");
+		}
+		else
+		{
+			System.out.println("All the best for next Fiscal ");
+			System.out.println("--------------------------------------------");
+		}
+	}
+	
+}
+	
