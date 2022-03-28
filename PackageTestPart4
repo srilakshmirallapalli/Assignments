@@ -1,0 +1,78 @@
+package PackageTest;
+
+public class HolidayHome {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Branch br1 = new Branch("Ooty", "Kerala");
+		System.out.println(br1);
+		br1.show();
+		
+		System.out.println("feedback details : "+Branch.givefb());
+
+		HolHome hh1 = new HolHome();
+		
+				
+	}
+
+}
+
+class HolHome extends Movie
+{
+		
+	void movielist()
+	{
+		System.out.println("watching movie in holidayhome");
+		Movie holmov = null;
+		System.out.println("public movie is in "+holmov.movpublic+ "  floor");
+		System.out.println("private movie is in "+holmov.movprivate+ "  floor");
+		System.out.println("protected movie is in "+holmov.movprot+ "  floor");
+		System.out.println("default movie is in "+holmov.movdefault+ "  floor");
+	}
+
+}
+
+class Branch extends HolHome //is a 
+{
+	String brLoc;
+	String brState;
+	public Branch(String brLoc, String brState) {
+		super();
+		this.brLoc = brLoc;
+		this.brState = brState;
+	}
+	@Override
+	public String toString() {
+		return "Branch [brLoc=" + brLoc + ", brState=" + brState + "]";
+	}
+	
+	public void show()
+	{
+		System.out.println("HolidayHome details are as above");
+	}
+	
+	public static Feedback givefb() //uses a
+	{
+		Feedback fb1 = new Feedback(2, "yogesh", "Ooty");
+		return fb1;
+	}
+}
+
+class Feedback
+{
+	private int rating;
+	protected String custName;
+	String holLoc;
+	public Feedback(int rating, String custName, String holLoc) {
+		super();
+		this.rating = rating;
+		this.custName = custName;
+		this.holLoc = holLoc;
+	}
+	@Override
+	public String toString() {
+		return "Feedback [rating=" + rating + ", custName=" + custName + ", holLoc=" + holLoc + "]";
+	}
+	
+	
+}
