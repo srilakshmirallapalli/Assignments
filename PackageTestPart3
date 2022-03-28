@@ -1,0 +1,43 @@
+package PackageTest;
+
+public class Vehicle {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Company c1 = new Company();
+		c1.showBrand();
+		
+		TwoWheeler tw1  =new TwoWheeler();
+		tw1.show2Wheeler();
+	}
+}
+
+interface VehType
+{
+		void show2Wheeler();
+}
+
+interface Brand
+{
+	void showBrand();
+	
+}
+	
+class TwoWheeler implements VehType
+{
+
+	public void show2Wheeler() {
+		// TODO Auto-generated method stub
+	System.out.println("shows two wheeler details");
+	}
+
+}
+
+class Company implements Brand
+{
+
+	public void showBrand() {
+		// TODO Auto-generated method stub
+		System.out.println("shows brand details");
+	}
+}
