@@ -1,0 +1,123 @@
+package PackageTest;
+
+interface ClassRoomInt
+{
+	void writing();
+	
+}
+
+interface Instrument
+{
+	void playing();
+}
+
+interface Lib
+{
+	void reading();
+}
+
+interface Progress
+{
+	void updateProgress();
+}
+
+public class ClassRoom { //has a
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Books book1 = new Books("srinidhi");
+		book1.writing();
+		//book1.reading();
+				
+		Library lib1 = new Library("rushika", "fairy tales", 4);
+		lib1.reading();
+		//lib1.writing();
+		
+		Guitar gtr1 = new Guitar();
+		gtr1.playing();
+		//gtr1.reading();
+		
+		
+	}
+
+}
+
+class Class
+{
+
+}
+
+class Books extends Class implements ClassRoomInt 
+{
+	String sname;
+	//int rollNo;
+	
+	public Books(String sname) {
+		super();
+		this.sname = sname;
+	}
+
+	@Override
+	public void writing() {
+		// TODO Auto-generated method stub
+		System.out.println("student "+sname+" is writing");
+		System.out.println("*********************************************");
+	}
+}
+
+class Library implements Lib
+{
+	String sname;
+	String bookName;
+	int pageNo;
+	
+	
+	public Library(String sname, String bookName, int pageNo) {
+		super();
+		this.sname = sname;
+		this.bookName = bookName;
+		this.pageNo = pageNo;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Library [sname=" + sname + ", bookName=" + bookName + ", pageNo=" + pageNo + "]";
+	}
+
+	@Override
+	public void reading() {
+		// TODO Auto-generated method stub
+		System.out.println("student "+sname+" is reading book "+bookName+" in page no"+pageNo);
+		System.out.println("******************************************************");
+	}
+}
+
+class ReportCard implements Progress
+{
+	char grade;
+	
+	public ReportCard(char grade) {
+		super();
+		this.grade = grade;
+	}
+
+	@Override
+	public void updateProgress() {
+		// TODO Auto-generated method stub
+		System.out.println("student ");
+	}
+	
+}
+
+class Guitar implements Instrument
+{
+	
+	@Override
+	public void playing() {
+		// TODO Auto-generated method stub
+	System.out.println("playng guitar is not allowed in music class not in library");
+	System.out.println();
+	}
+	
+}
