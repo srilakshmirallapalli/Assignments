@@ -1,0 +1,136 @@
+package PackageTest;
+
+public class Online {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Netbanking nb2 = new Netbanking();
+		nb2.credentials(32848264860l, "srilakshmi");
+	
+		
+		Movie m1 = new Movie();
+		m1.watching("pushpa");
+		
+		AirConditioner ac1 = new AirConditioner();
+		ac1.cooling();
+		
+		AirConditioner.func();
+		
+		GasBill gs = new GasBill();
+		
+		Movie m2 = new Movie();
+		m2.movielist();
+		
+	}
+
+}
+
+interface Watch
+{
+	void watching(String name);
+	
+}
+
+interface Cool
+{
+	void cooling();
+	
+	void sleep();
+}
+class GasBill
+{
+	public static Netbanking login()
+	{
+	Netbanking nb1 = new Netbanking();
+	return nb1;
+	}
+}
+
+class Netbanking
+{
+	private long accno;
+	private String name;
+	
+	public Netbanking()
+	{
+		
+	}
+	
+		public Netbanking(long accno, String name) {
+		super();
+		this.accno = accno;
+		this.name = name;
+	}
+
+
+	public void credentials(long acc, String acname)
+	{
+		System.out.println("username :"+acc+" and accno :"+acname);
+	}
+	
+	@Override
+	public String toString() {
+		return "Netbanking [accno=" + accno + ", name=" + name + "]";
+	}
+	
+	
+	
+}
+
+class Movie implements Watch
+{
+	String movName;
+	public int movpublic;
+	private int movprivate;
+	protected int movprot;
+	int movdefault;
+	
+	
+	@Override
+	public void watching(String name) {
+		// TODO Auto-generated method stub
+		System.out.println("watching the pan India movie"+name);
+	}
+	
+	void movielist()
+	{
+		System.out.println("public movie is in "+movpublic+ "  floor");
+		System.out.println("private movie is in "+movprivate+ "  floor");
+		System.out.println("protected movie is in "+movprot+ "  floor");
+		System.out.println("default movie is in "+movdefault+ "  floor");
+	}
+}
+
+class AirConditioner implements Cool
+{
+	static int hours=8;
+
+	@Override
+	public void cooling() {
+		// TODO Auto-generated method stub
+		System.out.println("cons call-->AC is switched on, started cooling");
+	}
+	
+	public static void func() 
+	{
+		// TODO Auto-generated method stub
+		System.out.println("static method call-->AC is switched on, started cooling");
+	}
+	
+	@Override
+	public void sleep() {
+		// TODO Auto-generated method stub
+		if (hours ==8)
+		System.out.println("go to sleep, cooling is done");
+		System.out.println("no. of hours ac is on "+hours);
+	}
+	
+}
+
+class Clothing extends Netbanking
+{
+	public void buy(String name, long acno)
+	{
+		System.out.println("online checkout with user cresdentials"+name+" "+accno);
+	}
+}
