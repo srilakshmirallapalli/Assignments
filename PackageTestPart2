@@ -1,0 +1,34 @@
+package PackageTest;
+
+public class Restaurant {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+class Restrnt extends Feedback
+{
+
+	public Restrnt(int rating, String custName, String holLoc) {
+		super(rating, custName, holLoc);
+		// TODO Auto-generated constructor stub
+	}
+	
+	public void showfb()
+	{
+		//System.out.println("feedback rating is"+Feedback.rating);
+		System.out.println("sorry, rating details are confidential");
+	}
+}
+
+class Kfc
+{
+	
+}
+
+class Food
+{
+	
+}
