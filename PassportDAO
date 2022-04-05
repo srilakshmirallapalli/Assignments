@@ -1,0 +1,11 @@
+import java.util.Set;
+
+public interface PassportDAO 
+{
+	void addPassport(Passport pasprt);
+	void modifyPassport(Passport pasprt);
+	Passport findPassport(int passportNo);
+	Set<Passport> findAllPassports();
+	
+}
+
