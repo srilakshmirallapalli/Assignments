@@ -1,0 +1,61 @@
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+public class PassportDAOImpl implements PassportDAO {
+
+	EntityManagerFactory emf;
+	EntityManager em ;
+	
+	public PassportDAOImpl() {
+		System.out.println("EmployeeDAOImpl()....");
+		// TODO Auto-generated method stub
+				System.out.println("Trying to read persistence.xml file...");
+				
+				//3
+				this.emf = Persistence.createEntityManagerFactory("MyJPA");
+				System.out.println("EntityManagerFactory created....");
+				
+				this.em = emf.createEntityManager();
+				System.out.println("EntityManager created....");
+	}
+	
+	public void addPassport(Passport pasprt) 
+	{
+		// TODO Auto-generated method stub
+		EntityTransaction et = em.getTransaction();
+		et.begin();
+			em.persist(pasprt);
+		et.commit();
+		
+	}
+
+	public void modifyPassport(Passport pasprt) {
+		// TODO Auto-generated method stub
+		EntityTransaction et = em.getTransaction();
+		et.begin();
+			em.merge(pasprt);
+		et.commit();
+		
+	}
+
+	public Passport findPassport(int passportNo) {
+		// TODO Auto-generated method stub
+		return em.find(Passport.class, 123123);
+	}
+
+	public Set<Passport> findAllPassports() {
+		// TODO Auto-generated method stub
+		Query query = em.createQuery("from Passport");
+		List<Passport> list = query.getResultList();
+		Set<Passport> pasprtSet = new HashSet(list);
+		return pasprtSet;
+	}
+	
+}
