@@ -1,0 +1,25 @@
+import org.junit.Test;
+import java.time.LocalDate;
+
+public class PassportOrmDaoTesting {
+
+	@Test
+	public void showPassportTest()
+	{
+		PassportDAOImpl pasprtDAO = new PassportDAOImpl();
+		Passport pasprt = pasprtDAO.findPassport(123123);
+		System.out.println("Passport Number: "+pasprt.getPassportNo());
+		System.out.println("Passport Issued by:"+pasprt.getIssuedBy());
+		System.out.println("Passport Issued Date:"+pasprt.getIssuedDate());
+		System.out.println("passport Expiry Date:"+pasprt.getExpiryDate());
+	}
+	
+	@Test
+	public void addPassportTest()
+	{
+		Passport pasprt1 = new Passport(123123, "GOI", LocalDate.of(2021, 3, 21), LocalDate.of(2031, 3,20, 0));
+		PassportDAOImpl pasprtDAO = new PassportDAOImpl();
+		Passport pasprt = pasprtDAO.addPassport(pasprt1);
+		
+	}
+}
