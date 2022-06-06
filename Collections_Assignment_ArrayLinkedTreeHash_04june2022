@@ -1,0 +1,224 @@
+------------------------ArrayListTest-------------------------------------------------------
+import java.time.LocalDate;
+import java.util.ArrayList;
+
+public class ArrayListTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Log l1 = new Log("srinidhi", "dialed", LocalDate.now());
+		Log l2 = new Log("rajesh", "missed", LocalDate.now());
+		Log l3 = new Log("lokesh", "incoming", LocalDate.now());
+		ArrayList<Log> logData = new ArrayList<Log>();
+		
+	
+		System.out.println("Displaying the call Log data....");
+		logData.add(new Log("padma", "missed", LocalDate.now()));
+		logData.add(l1);
+		logData.add(new Log("anil", "dialed", LocalDate.now()));
+		logData.add(l2);
+		logData.add(new Log("harika", "incoming", LocalDate.now()));
+		logData.add(l3);
+		logData.add(new Log("Jayendra", "missed", LocalDate.now()));
+			
+		for(int i=1; i<logData.size();i++)
+		{
+			System.out.println(+i+" :"+logData.get(i));
+		}
+		
+		System.out.println("adding 7th log....");
+		logData.add(new Log("ramu", "outgoing", LocalDate.now()));
+		
+		System.out.println("7 :"+logData.get(7));
+		
+	}
+
+}
+
+class Log
+{
+	String callerName;
+	String callType;
+	LocalDate callDate;
+	
+	public Log(String callerName, String callType, LocalDate callDate) {
+		super();
+		this.callerName = callerName;
+		this.callType = callType;
+		this.callDate = callDate;
+	}
+
+	@Override
+	public String toString() {
+		return "Log [callerName=" + callerName + ", callType=" + callType + ", callDate=" + callDate + "]";
+	}
+	
+	
+	
+}
+-----------------------LinkedListTest------------------------------------------------------------------------------------------
+import java.util.LinkedList;
+
+public class LinkedListTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LinkedList<Contacts> conData = new LinkedList<Contacts>();
+		
+		Contacts cd1 = new Contacts("Manish", 7895687945l, "manish45@gmail.com");
+		Contacts cd2 = new Contacts("Manish", 7895687945l, "manish45@gmail.com");
+		Contacts cd3 = new Contacts("Manish", 7895687945l, "manish45@gmail.com");
+		Contacts cd4 = new Contacts("Manish", 7895687945l, "manish45@gmail.com");
+		
+		conData.add(cd1);
+		conData.add(new Contacts("Sirish", 7568954625l,"siridh678@yahoo.com"));
+		
+		conData.add(cd2);
+		conData.add(new Contacts("Nimya", 7568954625l,"nimya.p@yahoo.com"));
+		
+		conData.add(cd3);
+		conData.add(new Contacts("Bheemesh", 7568954625l,"bheemesh.r@gmail.com"));
+		
+		conData.add(cd4);
+		conData.add(new Contacts("Rahul", 7568954625l,"rahuly@yahoo.com"));
+		
+		for(int i=1; i<conData.size();i++)
+		{
+			System.out.println(i+" :"+conData.get(i));
+		}
+		
+	}
+
+}
+
+class Contacts
+{
+	String conName;
+	long mobileNo;
+	String email;
+	public Contacts(String conName, long mobileNo, String email) {
+		super();
+		this.conName = conName;
+		this.mobileNo = mobileNo;
+		this.email = email;
+	}
+	@Override
+	public String toString() {
+		return "Contacts [conName=" + conName + ", mobileNo=" + mobileNo + ", email=" + email + "]";
+	}
+	
+	
+}
+----------------------------------------TreesetTest------------------------------------------------------------------------
+import java.util.Iterator;
+import java.util.TreeSet;
+
+public class TreeSetTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		TreeSet<Chemicals> chem = new TreeSet<Chemicals>();
+		
+		System.out.println("adding 1st object...");
+		chem.add(new Chemicals(20, "calcium", "Ca", 40.078f));
+		System.out.println("adding 12nd object...");
+		chem.add(new Chemicals(13, "aluminnium", "Al", 26.982f));
+		System.out.println("adding 3rd object...");
+		chem.add(new Chemicals(83, "Bismuth", "Bi", 208.98f));
+		System.out.println("adding 4th object...");
+		chem.add(new Chemicals(58, "Cerium", "Ce", 148.12f));
+		
+		Iterator<Chemicals> iterator = chem.iterator();
+		while(iterator.hasNext())
+		{
+			Chemicals chemDet = iterator.next();
+			System.out.println(chemDet);
+		}
+		
+	}
+
+}
+
+class Chemicals implements Comparable<Chemicals>
+{
+	int atomNo;
+	String atomName;
+	String atomFormula;
+	float atomWt;
+	public Chemicals(int atomNo, String atomName, String atomFormula, float atomWt) {
+		super();
+		this.atomNo = atomNo;
+		this.atomName = atomName;
+		this.atomFormula = atomFormula;
+		this.atomWt = atomWt;
+	}
+	
+	@Override
+	public String toString() {
+		return "Chemicals [atomNo=" + atomNo + ", atomName=" + atomName + ", atomFormula=" + atomFormula + ", atomWt="
+				+ atomWt + "]";
+	}
+
+	@Override
+	public int compareTo(Chemicals o) {
+		// TODO Auto-generated method stub
+		System.out.println("Comparing "+atomNo+" with "+o.atomNo);
+		return Integer.compare(atomNo, o.atomNo);
+	}
+	
+	
+}
+-----------------------------HashSetTest------------------------------------------------------------------------------------------
+import java.util.HashSet;
+import java.util.Iterator;
+
+public class HashSetTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HashSet<BookHash> bookDet = new HashSet<BookHash>();
+		
+		BookHash bh1 = new BookHash(67, "you can win", "shiv kare", 200, (short) 4, 458.56f);
+		BookHash bh2 = new BookHash(58, "ingnited minds", "APJ Kalam", 200, (short) 7, 58.45f);
+		
+		bookDet.add(new BookHash(45, "let us C", "Yashwant Kanatkar", 500, (short) 45, 458.52f));
+		bookDet.add(bh2);
+		bookDet.add(bh1);
+		
+		Iterator<BookHash> = bookDet.iterator();
+		while (iterator.hasNext())
+		{
+			
+		}
+		
+		
+	}
+
+}
+
+class BookHash
+{
+	int bookNo;
+	String bookName;
+	String bookAuth;
+	int numofPages;
+	short bookEdition;
+	float bookPrice;
+	public BookHash(int bookNo, String bookName, String bookAuth, int numofPages, short bookEdition, float bookPrice) {
+		super();
+		this.bookNo = bookNo;
+		this.bookName = bookName;
+		this.bookAuth = bookAuth;
+		this.numofPages = numofPages;
+		this.bookEdition = bookEdition;
+		this.bookPrice = bookPrice;
+	}
+	@Override
+	public String toString() {
+		return "BookHash [bookNo=" + bookNo + ", bookName=" + bookName + ", bookAuth=" + bookAuth + ", numofPages="
+				+ numofPages + ", bookEdition=" + bookEdition + ", bookPrice=" + bookPrice + "]";
+	}
+	
+	
+}
