@@ -1,0 +1,257 @@
+neft page1------------------------------------------------------------------------------------------------------------
+p>neft-page1 works!</p>
+<H1 >FUNDS TRANSFER </H1>
+<br>
+<br>
+
+<h3 style="background-color:powderblue; color:blue;">Outside SBI -Other Bank Trasnfer</h3>
+    <br>
+Use the other bank Trnsfer service to send money to beneficiaries holding in other banks
+<br>
+<br>
+<h4 style="color:blue">Select payment option:</h4>
+
+<table><td>Transaction Type*</td><td><input type="radio" name="transactiontype" value="IMPS">IMPS(Max Rs.2 lacs only</td>
+    <td><input type="radio" name="transactiontype" value="NEFT">NEFT</td><td><input type="radio" name="transactiontype" value="RTGS">RTGS</td>
+</table>
+    <br>
+<table class="centre"><button onClick="window.location.href='http://localhost:4200/app-neft-page2';">Proceed</button></table>
+<br>
+<br>
+<p >
+If you have any hidden accounts, please unhide through the tab Profile > Manage A/c Display > UnHide Accounts or UnHide Debit Accounts.<br>
+The schedule for processing RTGS/NEFT transactions is as under:<br>
+<br>
+Transaction Type	Timing	Availability<br>
+
+RTGS	24 x 7 (Available at all times)	All Days<br>
+NEFT	24 x 7 (Available at all times)	All Days<br>
+<br>
+NEFT transactions initiated without scheduling will be debited immediately and will be processed in next available NEFT batch.<br>
+
+NEFT transactions will be processed 24 x 7 as per RBI settlement cycles There is no minimum transaction amount for NEFT transactions.<br>
+
+Please note that there will be a delay in processing RTGS transactions between 11:50 P.M to 00:30 A.M. on all days due to RTGS cut-off period at RBI end.<br>
+<br>
+RTGS Transactions will be processed 24 x 7 on all days of the year, including holidays.<br>
+RTGS transactions will be credited to the beneficiary's account on the same day. Please note that the minimum amount for an RTGS transaction is ₹2,00,000.<br>
+<br>
+Know More about IMPS<br>
+Know More about RTGS/NEFT<br>
+</p>
+
+neft page2---------------------------------------------------------------------------------------------------------------------------------------------------------
+<p>neft-page2 works!</p>
+<h3 style="background-color:powderblue; color:blue;">NEFT Trasnfer</h3>
+    <br>
+<h5 style="color:red">Mandatory Fields are marked with an asterick(*).</h5>
+<br>
+<table [cellPadding]="10" [cellSpacing]="10">
+    <tr>
+        <th>Account No1</th>
+        <th>Account</th>
+        <th>Account Type</th>
+        <th>SBI Branch</th>
+        <th>Balance</th>
+    </tr>
+
+    <tr><td><input type="radio" value="3542589564">3542589564</td>
+        <td>Mr. XYZ</td><td>Savings Account</td>
+        <td>HUC Branch</td>
+        <td>25,456.50</td></tr>
+    <br>
+    <tr><td>Enter Amount*	:    </td> <td> <input type=text> </td></tr>
+    </table>
+    <br>
+<h5 style="color:blue">Select the Benificiary account to which you wish to transfer funds:</h5>
+<table [cellPadding]="10" [cellSpacing]="20">
+    <tr>
+        <th>Account No1</th>
+        <th>Benificiary Name</th>
+        <th>Branch</th>
+        <th>Bank</th>
+        <th>Limit</th>
+    </tr>
+    <tr><td><input type="radio" name="accountno" value="123456789">123456789</td>
+        <td>Rahul</td>
+        <td>Nanakramguda</td>
+        <td>ICIC Bank</td>
+        <td>10000</td></tr>
+    <tr><td><input type="radio" name="accountno" value="789456123">789456123</td>
+        <td>Manish</td>
+        <td>Electronicity</td>
+        <td>HDFC Bank</td>
+        <td>150000</td></tr>
+    <tr><td><input type="radio" name="accountno" value="123456789">123456789</td>
+        <td>Umesh</td>
+        <td>Nerul</td>
+        <td>AXIS Bank</td>
+        <td>25000</td></tr>
+</table>
+<br>
+<table [cellPadding]="10" [cellSpacing]="10"><td>Scheduled Date*</td><td><input type="radio" name="scheduled" value="Pay Now">Pay Now</td>
+    <td><input type="radio" name="scheduled" value="Schedule Later">Schedule Later</td><td><input type="radio" name="scheduled" value="Standing Instruction">Standing Instruction</td>
+</table>
+<br>
+<h5>Please select 'Pay Now' to post the transaction in your account immediately</h5>
+<br>
+<input type="checkbox" >          I accept the Terms & Conditions
+<br>
+<table class="centre"><input type="button" value="Proceed"></table>
+
+
+neft page3-------------------------------------------------------------------------------------------------------------------------------------------------------
+<p>neft-page3 works!</p>
+<h3 style="background-color:powderblue; color:blue;">NEFT Trasnfer - Other Bank Benificiary</h3>
+    <br>
+<h5 style="color:red">Verify the details and confirm this transaction</h5>
+<br>
+<h5 style="color:blue">Debit Account Details:</h5>
+<br>
+<table [cellPadding]="10" [cellSpacing]="10">
+    <tr>
+        <th>Account No1</th>
+        <th>Account</th>
+        <th>Account Type</th>
+        <th>SBI Branch</th>
+        <th>Balance</th>
+    </tr>
+    
+    <tr><td>3542589564</td>
+        <td>Mr. XYZ</td><td>Savings Account</td>
+        <td>HUC Branch</td>
+        <td>25,456.50</td></tr>
+</table>
+    <br>
+<h5 style="color:blue">Credit Account Details:</h5>
+<table [cellPadding]="10" [cellSpacing]="10">
+    <tr>
+        <th>Account No1</th>
+        <th>Benificiary Name</th>
+        <th>Branch</th>
+        <th>Bank</th>
+        <th>Limit</th>
+    </tr>
+    
+    <tr><td>123456789</td>
+        <td>Rahul</td>
+        <td>Nanakramguda</td>
+        <td>ICIC Bank</td>
+        <td>10000</td></tr>
+</table>
+<br>
+<table [cellSpacing]="20" class="centre">
+    <tr>
+    <td align="centre"><input type="button" name="submit" value="Proceed"></td>
+    <td align="centre"><input type="button" name="submit" value="Cancel"></td>
+</tr><table>
+
+
+index.html-------------------------------------------------------------------------------------------------------------------------------------------------
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>OnlineSBI</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <h1>This is from index.html</h1>
+  <nav>
+    <label class="logo">SBI</label>
+    <ul>
+        <li> <a clas="active" href="#">Home </a></li>     
+        <li> <a href="#">My Accounts </a></li> 
+        <li> <a href="#">Payments & Transfers </a></li> 
+        <li> <a href="#">Bill Payments </a></li> 
+        <li> <a href="#">Deposits & investments</a></li> 
+        <li> <a href="#">E-Services </a></li> 
+        <li> <a href="#">useful Links </a></li>         
+    </ul>  
+  
+  </nav>
+  <br>
+  <app-root></app-root>
+</body>
+</html>
+
+style.css------------------------------------------------------------------------------------------------------------------------------------
+*{
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: monsterrat;
+}
+
+nav{
+    background:#468de9 ;
+    height: 80px;
+    width:100%;
+}
+
+label.logo{
+    color:white;
+    font-size: 40px;
+    line-height: 80px;
+    padding: 0 50px;
+    font-weight: bold;
+}
+
+nav ul{
+    float:right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin:0 5px;
+}
+
+nav ul li a{
+    color:white;
+    font-size: 15px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active,a:hover{
+    background: #045766;
+    transition:.5s;
+}
+
+.split {
+    height: 100%;
+    width: 30%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .left {
+    left: 0;
+    background-color: #111;
+  }
+  
+  .right {
+    right: 0;
+    background-color: rgb(0, 255, 242);
+  }
+  
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
