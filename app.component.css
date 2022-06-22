@@ -1,0 +1,95 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: monsterrat;
+}
+
+header{
+    background:#468de9 ;
+    height: 80px;
+    width:100%;
+}
+
+label.logo{
+    color:white;
+    font-size: 40px;
+    line-height: 80px;
+    padding: 0 50px;
+    font-weight: bold;
+}
+
+
+header ul{
+    float:right;
+    margin-right: 20px;
+}
+
+header ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin:0 5px;
+}
+
+header ul li a{
+    color:white;
+    font-size: 15px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active,a:hover{
+    background: #045766;
+    transition:.5s;
+}
+
+table.logo1 {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 2px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+/* .split {
+    height: 100%;
+    width: 30%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .left {
+    left: 0;
+    background-color: #111;
+  } 
+  
+  .right {
+    right: 0;
+    background-color: rgb(0, 255, 242);
+  } 
+  
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }  */
+  

@@ -1,0 +1,261 @@
+<!-- <app-flight></app-flight> -->
+<!------------------------------------------------------------------------------------------------------>
+<header>
+  <label class="logo">SBI</label>
+  <ul>
+      <li> <a clas="active" href="#">Home </a></li>     
+      <li> <a href="#">My Accounts </a></li> 
+      <li> <a routerlink="NeftPage1">Payments & Transfers </a></li> 
+      <li> <a href="#">Bill Payments </a></li> 
+      <li> <a href="#">Deposits & investments</a></li> 
+      <li> <a href="#">E-Services </a></li> 
+      <li> <a href="#">useful Links </a></li>         
+  </ul>  
+
+</header>
+<br>
+<div style="background-color:light; height:900px; width:18%; float:left;">
+  <img src="assets\yono.png" width="100%"> 
+  <br>
+  <table class="logo1">
+  <th>Quick Links</th>
+      <tr><td> <a href="#">Quick transfer </a></td> </tr>
+      <tr><td> <a routerlink="NeftPage1">Payments & Transfers </a></td> </tr>
+      <tr><td> <a href="#">Other Payments </a></td> </tr>
+      <tr><td> <a href="#">Other Requests</a></td> </tr>
+      <tr><td> <a href="#">International Funds transfer </a></td> </tr>
+      <tr><td> <a href="#">useful Links </a></td></tr>     
+  </table> 
+  <br>
+  <img src="assets\home loan.jpg" width="100%"> 
+</div>
+<div style="background-color:light; height:900px; width:2%; float:left;">
+  
+</div>
+<router-outlet></router-outlet>
+<!--------------------------------------------------------------------------------------------------->
+<!-- <app-neft-page1></app-neft-page1>  -->
+<!-- <hr>
+<app-neft-page2></app-neft-page2> 
+<br>
+<hr>
+<br> -->
+<!-- <app-neft-page3></app-neft-page3>  --> -->
+ <!-- <app-employee3></app-employee3> -->
+ <!-- <hr>
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink="">Angular Routing</a>
+
+  <button class="navbar-toggler" 
+          type="button" 
+          (click)="toggleNavbar()" 
+          data-toggle="collapse" 
+          data-target="#navbarSupportedContent" 
+          aria-controls="navbarSupportedContent" 
+          aria-expanded="false" 
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div 
+      class="collapse navbar-collapse" 
+      [ngClass]="{ 'show': navbarOpen }">
+      <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item active">
+              <a class="nav-link" 
+                  routerLink="home" 
+                  routerLinkActive="active">Home 
+                  <span class="sr-only">(current)</span>
+              </a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link" 
+              routerLink="about" 
+              routerLinkActive="active">About Us</a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link" 
+              routerLink="privacy" 
+              routerLinkActive="active">Privacy Policy</a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link" 
+              routerLink="terms" 
+              routerLinkActive="active">Terms and Conditions</a>
+          </li>
+
+    </ul>
+
+  </div>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>  -->
+
+<!-- {{ title }} app is running!  -->
+<!-- <h1> this is from app component</h1>
+<ul>
+<li class="nav-item"><a class-link="nav-link" routerLink="home">Home</a></li>
+<li><a routerLink="about">About</a></li>
+<router-outlet></router-outlet> 
+<li><a routerLink="privacy">Privacy</a></li>
+<li><a routerLink="terms">Terms</a></li>
+</ul> --> 
+
+<!-- <router-outlet></router-outlet>  -->
+
+<!--<app-photo-details></app-photo-details>
+  <app-user-details></app-user-details>
+
+   <app-addpayee></app-addpayee>
+
+
+   <app-deletepayee></app-deletepayee>
+
+
+   <app-currency-conversion></app-currency-conversion>
+   <app-simple-int-calc></app-simple-int-calc><br> 
+   <hr>
+
+Converted Amount :  {{5000 | currency : 'INR'}}<br>
+Converted Amount :  {{5000 | currency : 'USD'}}<br>
+Converted Amount :  {{5000 | currency : 'GBP'}}<br>
+Converted Amount :  {{5000 | currency : 'EUR'}}<br>
+
+  <hr>
+  
+  short date of joining :{{hiredate | date : 'shortDate'}}<br>
+  long date of joining :{{hiredate | date : 'longDate'}}<br>
+  full date of joining :{{hiredate | date : 'fullDate'}}<br>
+  <hr>
+  short time of joining :{{hiredate | date : 'shortTime'}}<br>
+  medium time of joining :{{hiredate | date : 'mediumTime'}}<br>
+  long time of joining :{{hiredate | date : 'longTime'}}<br>
+  full time of joining :{{hiredate | date : 'fullTime'}}<br>
+  <hr>
+  short date & time of joining :{{hiredate | date : 'short'}}<br>
+  medium date & time of joining :{{hiredate | date : 'medium'}}<br>
+  long date & time of joining :{{hiredate | date : 'long'}}<br>
+  full date & time of joining :{{hiredate | date : 'full'}}<br>
+  <hr>
+  <h2 >
+  {{'welcome to angular js' | uppercase}}<br>
+  </h2><br>
+  {{'welcome to angular js' | titlecase}}<br>
+  <hr>
+  cube of 7 is :{{7|cube}}
+  <hr>
+  simple int of 50000 is :{{50000|simpleInt : 5 : 7.5}} -->
+
+  <!-- <table border=1 cellspacing="10" cellpadding="10">
+    <tr><td>Employee Number :</td><td>{{empno}}</td></tr>
+    <tr><td>Employee Name   :</td><td>{{empname}}</td></tr>
+    <tr><td>Employee Job    :</td><td>{{job}}</td></tr>
+    <tr><td>manager code    :</td><td>{{mgrcode}}</td></tr>
+    <tr><td>Date of Hiring   :</td><td>{{hiredate}}</td></tr>
+    <tr><td>Basic salary     :</td><td>{{basicsal}}</td></tr>
+    <tr><td>Commission      :</td><td>{{comm}}</td></tr>
+    <tr><td>Department Number:</td><td>{{deptno}}</td></tr>
+  </table>
+  
+  <table border=1 cellspacing="10" cellpadding="10">
+    <tr><td>Employee Number :</td><td>{{empObj.empno}}</td></tr>
+    <tr><td>Employee Name   :</td><td>{{empObj.empname}}</td></tr>
+    <tr><td>Employee Job    :</td><td>{{empObj.job}}</td></tr>
+    <tr><td>manager code    :</td><td>{{empObj.mgrcode}}</td></tr>
+    <tr><td>Date of Hiring   :</td><td>{{empObj.hiredate}}</td></tr>
+    <tr><td>Basic salary     :</td><td>{{empObj.basicsal}}</td></tr>
+    <tr><td>Commission      :</td><td>{{empObj.comm}}</td></tr>
+    <tr><td>Department Number:</td><td>{{empObj.deptno}}</td></tr>
+  </table> -->
+
+  <!--<table border=1 cellspacing="10" cellpadding="10">
+    <tr>
+      <th>Employee Number </th>
+      <th>Employee Name   </th>
+      <th>Employee Job    </th>
+      <th>manager code    </th>
+      <th>Date of Hiring   </th>
+      <th>Basic salary    </th>
+      <th>Commission      </th>
+      <th>Department Number</th>
+      </tr>
+      <tr>
+        <td>{{empno}}</td>
+        <td>{{empname}}</td>
+        <td>{{job}}</td>
+        <td>{{mgrcode}}</td>
+        <td>{{hiredate}}</td>
+        <td>{{basicsal}}</td>
+        <td>{{comm}}</td>
+        <td>{{deptno}}</td>
+        <td><button>EDIT</button></td>
+        <td><button>DELETE</button></td>
+      </tr>
+  
+    <tr>
+      <td>{{empObj.empno}}</td>
+      <td>{{empObj.empname}}</td>
+      <td>{{empObj.job}}</td>
+      <td>{{empObj.mgrcode}}</td>
+      <td>{{empObj.hiredate}}</td>
+      <td>{{empObj.basicsal}}</td>
+      <td>{{empObj.comm}}</td>
+      <td>{{empObj.deptno}}</td>
+      <td><button>EDIT</button></td>
+      <td><button>DELETE</button></td>
+    </tr>
+
+    <tr>
+      <td>{{empObj2.empno}}</td>
+      <td>{{empObj2.empname}}</td>
+      <td>{{empObj2.job}}</td>
+      <td>{{empObj2.mgrcode}}</td>
+      <td>{{empObj2.hiredate}}</td>
+      <td>{{empObj2.basicsal}}</td>
+      <td>{{empObj2.comm}}</td>
+      <td>{{empObj2.deptno}}</td>
+      <td><button>EDIT</button></td>
+      <td><button>DELETE</button></td>
+    </tr>
+  </table>
+
+  <h3>Printing the Employee array</h3>
+  <table border=1 cellspacing="10" cellpadding="10">
+    <tr>
+      <th>Employee Number </th>
+      <th>Employee Name   </th>
+      <th>Marital Status   </th>
+      <th>Employee Job    </th>
+      <th>manager code    </th>
+      <th>Date of Hiring   </th>
+      <th>Basic salary    </th>
+      <th>Commission      </th>
+      <th>Department Number</th>
+      </tr>
+     
+      <tr *ngFor="let empObj of empList">
+      <td>{{empObj.empno}}</td>
+      <td>{{empObj.empname}}</td>
+      <td *ngIf="empObj.maritalstatus==true; else myElseBlock">Married</td>
+
+      <ng-template #myElseBlock>
+          <td>Unmarried</td>
+      </ng-template>
+      <td>{{empObj.job}}</td>
+      <td>{{empObj.mgrcode}}</td>
+      <td>{{empObj.hiredate}}</td>
+      <td>{{empObj.basicsal}}</td>
+      <td>{{empObj.comm}}</td>
+      <td>{{empObj.deptno}}</td>
+      <td><button>EDIT</button></td>
+      <td><button>DELETE</button></td>
+    </tr>
+  </table>
+     <app-register></app-register>
+  <app-login></app-login> -->
